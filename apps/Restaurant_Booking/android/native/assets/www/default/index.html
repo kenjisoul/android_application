@@ -1,0 +1,74 @@
+<!DOCTYPE HTML><html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>index</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+        <link href="worklight/worklight.css" rel="stylesheet">
+        <link href="images/favicon.png" rel="shortcut icon">
+        <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+        <link href="css/main.css" rel="stylesheet">
+        <script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "Restaurant_Booking",
+   "APP_ID": "Restaurant_Booking",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "1.0",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "154549862",
+   "WORKLIGHT_PLATFORM_VERSION": "6.1.0.01.20140427-1450",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/Restaurant_Booking\/android\/"
+};</script>
+		<script src="worklight/cordova.js"></script>
+		<script src="worklight/wljq.js"></script>
+		<script src="worklight/worklight.js"></script>
+		<script src="worklight/checksum.js"></script>
+		<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+        <link href="jqueryMobile/jquery.mobile-1.4.2.css" rel="stylesheet">
+        <script src="jqueryMobile/jquery.mobile-1.4.2.js"></script>
+    </head>
+    <body style="display: none;">
+	<!-- Index Page -->
+        <div data-role="page" id="index">
+            <div data-role="header" id="header">
+                <h3>Index</h3>
+            </div>
+            <div data-fullscreen="true" data-position="fixed" data-role="content" style="padding: 15px">
+                <center>
+                    <h3>Booking!!!!</h3>
+                </center>
+            </div>
+            <div data-fullscreen="true" data-position="fixed" data-role="footer" data-tap-toggle="false">
+			<!-- /navbar -->
+                <div class="ui-btn-active ui-body-b" data-role="navbar">
+                    <ul>
+                        <li>
+                            <a class="ui-btn-active ui-state-persist" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="booking.html">Booking</a>
+                        </li>
+                        <li>
+                            <a href="checking.html">Check</a>
+                        </li>
+                        <li>
+                            <a href="cancel.html">Cancel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/messages.js"></script>
+    </body>
+</html>

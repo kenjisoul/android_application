@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="css/main.css">
+<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+<link href="jqueryMobile/jquery.mobile-1.4.2.css" rel="stylesheet">
+<script src="jqueryMobile/jquery.mobile-1.4.2.js"></script>
+</head>
+<body style="display: none;">
+	<!-- Cancel Page -->
+	<div data-role="page" id="cancel">
+		<div data-role="header" id="header" data-fullscreen='true'>
+			<h3>Cancel</h3>
+		</div>
+
+		<div data-role="content" style="padding: 15px" data-position="fixed"
+			data-fullscreen='true' data-tap-toggle='false'>
+			Cancel<br>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-fullscreen='true'
+			data-tap-toggle='false'>
+			<!-- /navbar -->
+			<div data-role="navbar" class="ui-btn-active ui-body-b">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="booking.html">Booking</a></li>
+					<li><a href="checking.html">Check</a></li>
+					<li><a href="cancel.html"
+						class="ui-btn-active ui-state-persist">Cancel</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/messages.js"></script>
+</body>
+</html>

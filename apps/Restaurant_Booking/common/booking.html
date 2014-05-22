@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="css/main.css">
+<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+<link href="jqueryMobile/jquery.mobile-1.4.2.css" rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.datepicker.js" rel="stylesheet">
+<script src="jqueryMobile/jquery.mobile-1.4.2.js"></script>
+<scrpit src="jqueryMobile/jquery.mobile.datepicker.js"></scrpit>
+</head>
+<body style="display: none;">
+	<!-- Booking Page -->
+	<div data-role="page" id="booking">
+		<div data-role="header" id="header" data-fullscreen='true'>
+			<h3>Booking</h3>
+		</div>
+
+		<div data-role="fieldcontain" style="padding: 15px"
+			data-position="fixed" data-fullscreen='true'>
+			<label for="text">ชื่อผู้รับบริการ:</label> <input type="text"
+				name="text" id="text"> <br /> <label for="text">วันที่และเวลา:</label>
+			<input type="text" id="time" data-field="datetime" readonly>
+			<div id="dtBox"></div>
+			<script type="text/javascript">
+				$(document).ready(
+						function() {
+							var currentdate = new Date();
+							// For todays date;
+							Date.prototype.today = function(plus) {
+								return ((this.getDate() < 10) ? "0" : "")
+										+ this.getDate()
+										+ "-"
+										+ (((this.getMonth() + 1) < 10) ? "0"
+												: "")
+										+ (this.getMonth() + plus) + "-"
+										+ this.getFullYear();
+							}
+
+							// For the time now
+							Date.prototype.timeNow = function() {
+								return ((this.getHours() < 10) ? "0" : "")
+										+ this.getHours() + ":"
+										+ ((this.getMinutes() < 10) ? "0" : "")
+										+ this.getMinutes();
+							}
+							var now = currentdate.today(1) + " "
+									+ currentdate.timeNow();
+							var dest = currentdate.today(2) + " 23:59";
+							$("#dtBox").DateTimePicker({
+								minDateTime : now,
+								maxDateTime : dest
+							});
+						});
+			</script>
+			<br /> <a data-role="button" data-transition="fade"
+				href="javascript:time_validate('booking')" id="searchContact">Test
+				DB</a>
+			<div data-role="listview" data-insert="true" id="show"></div>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-fullscreen='true'
+			data-tap-toggle='false'>
+			<!-- /navbar -->
+			<div data-role="navbar" class="ui-btn-active ui-body-b">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="booking.html"
+						class="ui-btn-active ui-state-persist">Booking</a></li>
+					<li><a href="checking.html">Check</a></li>
+					<li><a href="cancel.html">Cancel</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/messages.js"></script>
+	<script src="js/validates.js"></script>
+</body>
+</html>
